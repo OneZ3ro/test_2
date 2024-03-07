@@ -45,6 +45,11 @@ public class UtenteEntity implements UserDetails {
 	@JoinTable(name = "utenti_libri", joinColumns = @JoinColumn(name = "id_utente"), inverseJoinColumns = @JoinColumn(name = "id_libro"))
 	private List<LibroEntity> libriAquistati;
 
+	public UtenteEntity() {};
+	public UtenteEntity(String nome) {
+		this.nome = nome;
+	}
+	
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		List<GrantedAuthority> authorities = new ArrayList<>();

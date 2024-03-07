@@ -52,4 +52,9 @@ public class UtenteController {
     	return utenteService.primoEsercizio();
     }
     
+    @GetMapping("/secondoEsercizio")
+    public UtenteEntity secondoEsercizio() {
+    	return utenteService.secondoEsercizio();
+    }
+    
 }
